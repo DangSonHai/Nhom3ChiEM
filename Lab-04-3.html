@@ -1,0 +1,75 @@
+<html>
+			
+    <style>
+	table{
+        margin: 0 0 25% 30%;
+        font-size: 28;
+        border: 20px;
+    }
+    </style>
+    
+    <head>
+        <title> Lap 04.1 - DienTichChuViHinhTron </title>
+    </head>
+    <body>
+    
+    <h1 style = "color:#FF3399;  text-align: center; font-size: 54" > Tính Diện Tích và Chu vi Hình tròn </h1>
+    
+    <div id = "Tinh"> 
+        <div class="container">
+        <form id = "TinhDienTich"> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> <h1> Diện tích  và chu vi hình Tròn</h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Chiều dài</td>
+                            <td> <input type="number" id = "bankinh" placeholder="Nhập bán kính"  </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> Diện Tích</td>
+                            <td> <input type="number" id = "dientich" placeholder="Diện tích" disabled="disabled" </td>
+                        </tr>
+                        <tr>
+                            <td> Chu vi </td>
+                            <td> <input type="number" id = "chuvi" placeholder="Chu vi" disabled="disabled" </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                           
+                            <input type ="button" onclick="TinhDienTich()" value="Tính">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+           </form>
+        </div>
+
+    <span id="copyright">
+    <br>
+    &copy; Liên hệ: Nhóm 4 - HP: Thiết kế WEB
+    </span>
+    </div>
+    <script type="text/javascript">
+        function TinhDienTich ()
+        {
+            var bankinh = document.getElementById ('bankinh');
+            
+            var dientich = bankinh.value * bankinh.value * 3.14;
+            //return dientich;
+            document.getElementById("dientich").value = dientich;
+            var chuvi = bankinh.value * 2 * 3.14;
+            //return dientich;
+            document.getElementById("chuvi").value = chuvi;
+        }
+        
+    </script>
+    
+    
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+			
+    <style>
+	table{
+        margin: 0 0 25% 30%;
+        font-size: 28;
+        border: 20px;
+    }
+    </style>
+    
+    <head>
+        <title> Lap 04.5 - Canh Huyen Tam giac vuong </title>
+    </head>
+    <body>
+    
+    <h1 style = "color:#FF3399;  text-align: center; font-size: 54" > Cạnh huyền Tam giác vuông </h1>
+    
+    <div id = "Tinh"> 
+        <div class="container">
+        <form id = "Tamgiacvuong"> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> <h1> Tam giác vuông </h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Cạnh A </td>
+                            <td> <input type= "number" id = "canhA" placeholder="Cạnh A" > </td> 
+                        </tr>
+                        <tr>
+                            <td> Cạnh B </td>
+                            <td> <input type= "number" id = "canhB" placeholder="Cạnh B" > </td>
+                        </tr>
+                        <tr>
+                            <td> Cạnh huyền </td>
+                            <td> <input type="number" id = "canhH" placeholder="Cạnh huyền" disabled="disabled" > </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                            <input type ="button" onclick="Tamgiacvuong()" value="Tính">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+           </form>
+        </div>
+
+    <span id="copyright">
+    <br>
+    &copy; Liên hệ: Nhóm 4 - HP: Thiết kế WEB
+    </span>
+    </div>
+    <script type="text/javascript">
+        function Tamgiacvuong ()
+        {
+            var ca = document.getElementById ('canhA');
+            var cb = document.getElementById ('canhB');
+
+            var ch1 = (ca.value*ca.value ) ;
+            var ch2 = (cb.value*cb.value );
+
+            document.getElementById("canhH").value = Math.sqrt( ch2+ch1).toFixed(2);
+        }
+    </script>
+    
+    
+    </body>
+</html>

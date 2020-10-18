@@ -1,0 +1,84 @@
+<html>
+			
+    <style>
+	table{
+        margin: 0 0 25% 30%;
+        font-size: 28;
+        border: 20px;
+    }
+    </style>
+    
+    <head>
+        <title> Lap 04.4 - Thanh Toan Tien Dien </title>
+    </head>
+    <body>
+    
+    <h1 style = "color:#FF3399;  text-align: center; font-size: 54" > Thanh Toán Tiền Điện </h1>
+    
+    <div id = "Tinh"> 
+        <div class="container">
+        <form id = "ThanhToanTienDien"> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> <h1> Thanh Toán Tiền Điện</h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Tên chủ hộ</td>
+                            <td> <input type= "text" id = "tenchuho" placeholder="Nhập tên chủ hộ"  </td>
+                        </tr>
+                        <tr>
+                            <td> Chỉ số cũ </td>
+                            <td> <input type= "number" id = "chisocu" placeholder="Chỉ số cũ?"  </td>
+                            <td> (KW) </td>
+                        </tr>
+                        <tr>
+                            <td> Chỉ số mới</td>
+                            <td> <input type= "number" id = "chisomoi" placeholder="Chỉ số mới?"  </td>
+                            <td> (KW) </td>
+                        </tr>
+                        <tr>
+                            <td> Đơn giá</td>
+                            <td> <input type= "number" id = "dongia" placeholder="Đơn giá"  </td>
+                            <td> VNĐ </td>
+                        </tr>
+                        <tr>
+                            <td> Số tiền thanh toán </td>
+                            <td> <input type="number" id = "thanhtoan" placeholder="Số tiền thanh toán" disabled="disabled" </td>
+
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2">
+                            <input type ="button" onclick="ThanhToanTienDien()"  value="Tính">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+           </form>
+        </div>
+
+    <span id="copyright">
+    <br>
+    &copy; Liên hệ: Nhóm 4 - HP: Thiết kế WEB
+    </span>
+    </div>
+    <script type="text/javascript">
+        function ThanhToanTienDien ()
+        {
+            var csc = document.getElementById ('chisocu');
+            var csm = document.getElementById ('chisomoi');
+            var dongia = document.getElementById ('dongia');
+            var thanhtien = (csm.value - csc.value) * dongia.value;
+            
+            document.getElementById("thanhtoan").value = thanhtien;
+
+        }
+        
+    </script>
+    
+    
+    </body>
+</html>

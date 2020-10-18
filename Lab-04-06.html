@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            table{
+                margin: 0 0 30% 30%;
+                font-size:28;
+                border:20px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+    </head>
+        <title>Lab - 4.6 - Tìm số lớn hơn </title>
+    <body>
+        <h1 style="color:#FF3366; text-align:center; font-size:54;font-family:Verdana, Geneva, Tahoma, sans-serif;">Trang tìm số lớn hơn</h1>
+        <div id = "Xem ket qua">
+            <div class="container">
+                <form id="Tim">
+                    <table style="background-color: rgb(255, 236, 182);width: 500px;">
+                        <thread>
+                            <tr>
+                                <th colspan ="2"><h1 style="background-color: rgb(255, 115, 0);font-size: 30; font-family:Verdana, Geneva, Tahoma, sans-serif; color: #993300">TÌM SỐ LỚN HƠN</h1></th>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr>
+                                <td>Số a:</td>
+                                <td><input type="number" id="soA" placeholder="Nhập số a"></td>
+                            </tr>
+                            <tr>
+                                <td>Số b:</td>
+                                <td><input type="number" id="soB" placeholder="Nhập số b"></td>
+                            </tr>
+                            <tr>                  
+                            <td> Số lớn hơn:</td>
+                            <td> <input type="text" id = "solonhon" placeholder="kết quả" disabled="disabled" > </td>
+                             </tr>                   
+                        <tr>
+                            <td colspan="2">
+                            <input type ="button" onclick="TimSoLon()" value="Tìm" style="width: 100px;margin-left: 50%;margin-right: 50%;
+                            padding: 8px;font-size: 15;">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+
+        </div>
+    <script type="text/javascript">
+        
+        function TimSoLon(){
+            var soa = document.getElementById ('soA');
+            var sob = document.getElementById ('soB');
+            if(Number(soa.value)>=Number(sob.value)){
+                    document.getElementById('solonhon').value=soa.value;
+                }
+            else document.getElementById('solonhon').value=sob.value;
+
+        }
+    </script>
+    
+    </body>
+</html>

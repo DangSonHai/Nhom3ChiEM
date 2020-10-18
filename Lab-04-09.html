@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            table{
+                margin: 0 0 30% 30%;
+                font-size:28;
+                border:20px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+    </head>
+        <title>Lab - 4.9 - Điểm thi đại học </title>
+    <body>
+        <h1 style="color:#080707; text-align:center; font-size:54;font-family:Verdana, Geneva, Tahoma, sans-serif;">Trang điểm thi đại học</h1>
+        <div id = "Xem ket qua">
+            <div class="container">
+                <form id="XemKetQua">
+                    <table style="background-color: lightpink;width: 500px;">
+                        <thread>
+                            <tr>
+                                <th colspan ="2"><h1 style="background-color: fuchsia;font-size: 30;">KẾT QUẢ THI ĐẠI HỌC</h1></th>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr>
+                                <td>Toán:</td>
+                                <td><input type="number" id="diemtoan" placeholder="Nhập điểm toán"></td>
+                            </tr>
+                            <tr>
+                                <td>Lý:</td>
+                                <td><input type="number" id="diemly" placeholder="Nhập điểm lý"></td>
+                            </tr>
+                            <tr>
+                                <td>Hóa:</td>
+                                <td><input type="number" id="diemhoa" placeholder="Nhập điểm hoá"></td>
+                            </tr>
+                            <tr>
+                                <td>Điểm chuẩn:</td>
+                                <td style="color:#ff00ff"><input type="number" id="diemchuan" placeholder="Nhập điểm chuẩn"></td>
+                            </tr>
+                            <tr>
+                                <td>Tổng điểm:</td>
+                                <td><input type="number" id="tongdiem" placeholder="tổng điểm" disabled="disabled"></td>
+                            </tr>
+                            <tr>
+                            <td> Kết quả thi:</td>
+                            <td> <input type="text" id = "xemketqua" placeholder="xem kết quả" disabled="disabled" > </td>
+                            </tr>
+                    
+                            <tr>
+                            <td colspan="2">
+                            <input type ="button" onclick="TinhTongDiem()" value="Xem kết quả" style="width: 100px;margin-left: 50%;margin-right: 50%;
+                            padding: 8px;font-size: 15;">
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+
+        </div>
+    <script type="text/javascript">
+        
+        function TinhTongDiem(){
+            var toan = document.getElementById ('diemtoan');
+            var ly = document.getElementById ('diemly');
+            var hoa = document.getElementById ('diemhoa');
+            var tong=Number(toan.value)+Number(ly.value)+Number(hoa.value);
+            //return dientich;
+            document.getElementById("tongdiem").value = tong;
+            var dchuan = document.getElementById ('diemchuan');
+            if(Number(toan.value)>0 & Number(ly.value)>0 & Number(hoa.value)>0 & (tong>=Number(dchuan.value))){
+                    document.getElementById('xemketqua').value='Đậu';
+                }
+            else document.getElementById('xemketqua').value='Rớt';
+
+        }
+    </script>
+    
+    </body>
+</html>

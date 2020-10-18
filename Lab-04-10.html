@@ -1,0 +1,72 @@
+<html>
+			
+    <style>
+	table{
+        margin: 5% 0 00% 25%;
+        font-size: 28;
+        border: 5px;
+       
+        
+    }
+    </style>
+    
+    <head>
+        <title> Lap 04.10 - Giải phương trình bậc nhất </title>
+    </head>
+    <body>
+    
+   
+    <div id = "Tinh"> 
+        <div class="container">
+        <form id = "ptbacnhat"> 
+                <table>
+                    <thead >
+                        <tr>
+                            <th colspan="2"> <h1 style ="color:#FF3399;  text-align: center; font-size: 50"> Phương trình bậc nhất 1 ẩn </h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Phương trình </td>
+                            <td> <input type= "number" id = "a" placeholder= "hệ số a" > </td> 
+                            <td style="text-align: center;"> x + </td>
+                            <td> <input type = "number" id = "b" placeholder= "hệ số b"> </td>
+                            <td style="text-align: center;"> = 0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> Nghiệm </td>
+                            <td colspan="3" > <input type="text" id = "x" placeholder="Nghiệm là" disabled="disabled" style="padding-right: 30%; padding-left: 10%; text-align: center;" > </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                            <input type ="button" onclick="Nghiem()" value="Tính" style="width: 100px; margin-left: 50%;margin-right: 50%;
+                            padding: 8px;font-size: 15;">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+           </form>
+        </div>
+
+    <span id="copyright">
+    <br>
+    &copy; Liên hệ: Nhóm 4 - HP: Thiết kế WEB
+    </span>
+    </div>
+    <script type="text/javascript">
+        function Nghiem ()
+        {
+            var a = document.getElementById ('a');
+            var b = document.getElementById ('b');
+           
+        if (Number(a.value) == 0 & Number(b.value)  == 0) { document.getElementById("x").value = "Pt vô số nghiệm";}
+        else if (a.value == 0 & b.value !== 0) {document.getElementById("x").value = "Phương trình vô nghiệm";}
+        else {document.getElementById("x").value = "x = " + (-b.value/a.value).toFixed(2).toString();}
+    
+        } 
+    </script>
+    
+    
+    </body>
+</html>
